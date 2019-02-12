@@ -94,16 +94,19 @@ class AboutIteration(Koan):
         # to the functools module.
 
         result = functools.reduce(self.add, [2, 3, 4])
-        self.assertEqual(__, result.__class__)
+        self.assertEqual(int, result.__class__)
         # Reduce() syntax is same as Python 2
 
-        self.assertEqual(__, result)
+        self.assertEqual(9, result)
 
         result2 = functools.reduce(self.multiply, [2, 3, 4], 1)
-        self.assertEqual(__, result2)
+        self.assertEqual(24, result2)
 
         # Extra Credit:
         # Describe in your own words what reduce does.
+        #
+        # apply reducer (add() or multiply()) one by one to iterable parameter start with init param value, 0 otherwise
+
 
     # ------------------------------------------------------------------
 
