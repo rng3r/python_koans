@@ -44,8 +44,8 @@ class AboutGenerators(Koan):
         attempt1 = list(dynamite)
         attempt2 = list(dynamite)
 
-        self.assertEqual(__, attempt1)
-        self.assertEqual(__, attempt2)
+        self.assertEqual(['Boom!', 'Boom!', 'Boom!'], attempt1)
+        self.assertEqual([], attempt2)
 
     # ------------------------------------------------------------------
 
@@ -59,7 +59,7 @@ class AboutGenerators(Koan):
         result = list()
         for item in self.simple_generator_method():
             result.append(item)
-        self.assertEqual(__, result)
+        self.assertEqual(['peanut', 'butter', 'and', 'jelly'], result)
 
     def test_generators_can_be_manually_iterated_and_closed(self):
         result = self.simple_generator_method()
